@@ -1,3 +1,9 @@
+const allowedCors = [
+  'https://practicum.yandex.ru',
+  'https://students-projects.ru',
+  'http://localhost:3000'
+];
+
 function cors(req, res, next) {
     const { origin } = req.headers;
     
@@ -8,11 +14,6 @@ function cors(req, res, next) {
     next();
 }
 
-const allowedCors = [
-    'https://practicum.yandex.ru',
-    'https://students-projects.ru',
-    'http://localhost:3000'
-  ];
 
   app.use(
     cors, 
